@@ -2,7 +2,7 @@
 
 lost your files? check your backpocket : >
 
-simpler backup/snapshotting tool using rsync and pax
+simple secure backup/snapshotting over ssh using rsync and pax
 
 ## Dependencies
 - rsync http://rsync.samba.org/
