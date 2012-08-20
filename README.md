@@ -5,8 +5,9 @@ lost your files? check your backpocket : >
 simple secure backup/snapshotting over ssh using rsync and pax
 
 ## Dependencies
+- node.js http://nodejs.org/download/
 - rsync http://rsync.samba.org/
-- pax http://en.wikipedia.org/wiki/Pax_(Unix)
+- pax http://en.wikipedia.org/wiki/Pax_(Unix) or cp (gnu flavour)
 
 ## Features
 - Very simple directory structure
@@ -15,9 +16,9 @@ simple secure backup/snapshotting over ssh using rsync and pax
 - snapshots make use of hard linking to save space - unmodified files can be snapshotted unlimited times without consuming more space
 - rsync only transfers modified files
 
-## Getting Started
+## Installation
 ```
-Install the module with: `npm install backpocket -g`
+npm install backpocket -g
 ```
 
 ## Examples
