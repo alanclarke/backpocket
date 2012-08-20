@@ -1,5 +1,7 @@
 # backpocket
 
+lost your files? check your backpocket : >
+
 simpler backup/snapshotting tool using rsync and pax
 
 ## Getting Started
@@ -7,6 +9,8 @@ Install the module with: `npm install backpocket`
 
 ```javascript
 var backpocket = require('backpocket');
+
+
 backpocket.awesome(); // "awesome"
 ```
 
