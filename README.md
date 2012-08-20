@@ -12,9 +12,8 @@ simpler backup/snapshotting tool using rsync and pax
 - Very simple directory structure
 - 'latest' directory contains latest backup
 - each incremental backup generates a new snapshot folder named with the following convention: 'yyyy-mm-dd hh-mm'
-- rsync only transfers modified files
 - snapshots make use of hard linking to save space - unmodified files can be snapshotted unlimited times without consuming more space
-
+- rsync only transfers modified files
 
 ## Getting Started
 Install the module with: `npm install backpocket -g`
