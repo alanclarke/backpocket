@@ -6,7 +6,7 @@ simple secure backup/snapshotting over ssh using rsync and pax
 
 ## Dependencies
 - rsync http://rsync.samba.org/
-- pax 
+- pax http://en.wikipedia.org/wiki/Pax_(Unix)
 
 ## Features
 - Very simple directory structure
