@@ -1,0 +1,38 @@
+{
+  "name": "backpocket",
+  "description": "Lost your files? Check your backpocket. A simpler backup/snapshotting tool using rsync and pax.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/alanclarke/backpocket",
+  "author": {
+    "name": "Alan Clarke",
+    "email": "hi@alz.so",
+    "url": "alz.so"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alanclarke/backpocket.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanclarke/backpocket/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/alanclarke/backpocket/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/backpocket",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.11"
+  },
+    "bin": {
+        "backpocket": "bin/backpocket.js"
+  },
+  "keywords": []
+}
