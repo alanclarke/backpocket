@@ -35,6 +35,10 @@ backpocket push ./important/ user@someipaddress:/home/user/backups/
 
 ## Options
 
+- **--cp [1]**: *use cp instead of pax. this runs on the destination machine. osx ships with pax and it's cp command doesn't support hard links, so if the dest is osx use pax, but if the dest is linux cp is more likely to be there already*
+
+- **--idkey [path]**: *optional path to ssh identity key if you want to specify an alternative to the default on your filesystem*
+
 - **--ignore [path]**: *path to file containing rules for ignoring files (as per rsync docs), default is:*
 
 ```
@@ -42,9 +46,6 @@ backpocket push ./important/ user@someipaddress:/home/user/backups/
 .DS_Store
 *.pyc
 ```
-- **--idkey [path]**: *optional path to ssh identity key if you want to specify an alternative to the default on your filesystem*
-
-- **--cp [1]**: *use cp instead of pax. this runs on the destination machine. osx ships with pax and it's cp command doesn't support hard links, so if the dest is osx use pax, but if the dest is linux cp is more likely to be there already*
 
 
 ## License
