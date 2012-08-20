@@ -12,7 +12,7 @@ simple secure backup/snapshotting over ssh using rsync and pax
 ## Features
 - simple directory structure
 - 'latest' folder contains latest backup
-- incremental backups, named 'yyyy-mm-dd hh-mm', provided timestamped snapshots
+- incremental backups, named 'yyyy-mm-dd hh-mm', provide timestamped snapshots
 - snapshots make use of hard linking to save space - unmodified files can be snapshotted unlimited times without consuming more space
 - rsync only transfers modified files
 
