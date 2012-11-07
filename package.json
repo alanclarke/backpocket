@@ -1,7 +1,7 @@
 {
   "name": "backpocket",
   "description": "Lost your files? Check your backpocket. A simpler backup/snapshotting tool using rsync and pax/cp.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/alanclarke/backpocket",
   "author": {
     "name": "Alan Clarke",
