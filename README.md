@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/alanclarke/backpocket.png)](http://travis-ci.org/alanclarke/backpocket)
 # backpocket
 
 lost your files? check your backpocket : >
