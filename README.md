@@ -10,9 +10,9 @@ simple secure backup/snapshotting over ssh using rsync and pax
 - pax http://en.wikipedia.org/wiki/Pax_(Unix) or cp (gnu flavour)
 
 ## Features
-- Very simple directory structure
-- 'latest' directory contains latest backup
-- each incremental backup generates a new snapshot folder named with the following convention: 'yyyy-mm-dd hh-mm'
+- simple directory structure
+- 'latest' folder contains latest backup
+- incremental backups, named 'yyyy-mm-dd at hh.mm.ss', provide timestamped snapshots
 - snapshots make use of hard linking to save space - unmodified files can be snapshotted unlimited times without consuming more space
 - rsync only transfers modified files
 
