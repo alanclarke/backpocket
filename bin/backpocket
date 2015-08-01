@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var bp = require('../lib/backpocket')
+var program = require('commander')
+var error = console.error.bind(console)
+var log = console.log.bind(console)
+
+program
+  .version('1.0.0')
+  .parse(process.argv)
+
+var src = program.args[0]
+
+bp(src) .then(null, error)
