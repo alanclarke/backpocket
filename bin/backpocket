@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 
 var bp = require('../lib/backpocket')
+var version = require('../package.json').version
 var program = require('commander')
 var error = console.error.bind(console)
 var log = console.log.bind(console)
 
 program
-  .version('1.0.0')
+  .version(version)
+  .description('create incremental backups of target in the current working directory')
+  .usage('[options] <target> \n\n  e.g. "backpocket ../files" or "backpocket user@server:files"')
   .option('-v, --verbose', 'verbose output')
   .parse(process.argv)
 
