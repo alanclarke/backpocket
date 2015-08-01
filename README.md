@@ -27,6 +27,8 @@ backpocket bob@server:/my/important/files
  *  - yyyy-mm-dd_hh-mm-ss
  *  - yyyy-mm-dd_hh-mm-ss
 */
+
+// see backpocket --help for more options
 ```
 ## Dependencies
 - node.js http://nodejs.org/download/
