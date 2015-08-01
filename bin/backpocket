@@ -7,8 +7,9 @@ var log = console.log.bind(console)
 
 program
   .version('1.0.0')
+  .option('-v, --verbose', 'verbose output')
   .parse(process.argv)
 
 var src = program.args[0]
 
-bp(src) .then(null, error)
+bp(src, program).then(null, error)
