@@ -2,13 +2,13 @@
 
 lost your files? check your backpocket : >
 
-simple secure backup/snapshotting over ssh using rsync and pax
+create incremental timemachine style backups locally or over ssh
 
-## Usage
+### usage
 ```js
 npm install backpocket -g
 cd ~/backups
-backpocket bob@server:/my/important/files
+backpocket user@server:/my/important/files
 
 /*
  *  Creates the following in ~/backups
@@ -21,20 +21,39 @@ backpocket bob@server:/my/important/files
 backpocket bob@server:/my/important/files
 
 /*
- *  Create more dated archives
+ *  Creates more incremental archives
  *  - latest
  *  - yyyy-mm-dd_hh-mm-ss
  *  - yyyy-mm-dd_hh-mm-ss
  *  - yyyy-mm-dd_hh-mm-ss
 */
 
-// see backpocket --help for more options
-```
-## Dependencies
-- node.js http://nodejs.org/download/
-- rsync http://rsync.samba.org/
-- pax http://en.wikipedia.org/wiki/Pax_(Unix) or cp (gnu flavour)
+backpocket --help
 
-## Features
+/*
+ *  Usage: backpocket [options] <target>
+ *
+ *  e.g. "backpocket ../files" or "backpocket -p 30days -f YYYY-MM-DD_hh-mm-ss user@server:files"
+ *
+ *  create incremental backups of target in the current working directory
+ *
+ *  Options:
+ *
+ *    -h, --help            output usage information
+ *    -V, --version         output the version number
+ *    -v, --verbose         verbose output
+ *    -f, --format          format for archive directory (default is "YYYY-MM-DD_hh-mm-ss")
+ *    -p, --purge n[units]  remove backups older than... "2seconds", "2minutes", "2hours", "2days", "2weeks"
+ */
+```
+
+### features
+- works over ssh
 - only transfers modified files
-- uses hard links to unmodified files, i.e. if nothing changed, incremental backup should take up zero additional disk space
+- uses hard links i.e. if nothing changed, incremental backup takes up zero additional disk space
+- unit tested
+
+### dependencies
+- node.js http://nodejs.org/download/
+- pax http://en.wikipedia.org/wiki/Pax_(Unix)
+- rsync http://rsync.samba.org/
