@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 
-var bp = require('../lib/backpocket')
-var version = require('../package.json').version
 var program = require('commander')
+var bp = require('../lib/backpocket')
+var defaults = require('../lib/defaults')
+var version = require('../package.json').version
 
 program
   .version(version)
   .description('create incremental backups of target in the current working directory')
-  .usage('[options] <target> \n\n  e.g. "backpocket ../files" or "backpocket -p 30days -f YYYY-MM-DD_hh-mm-ss user@server:files"')
+  .usage('[options] <target> \n\n  e.g. "backpocket ../files" or "backpocket -p 30days -f ' + defaults.format + ' user@server:files"')
   .option('-v, --verbose', 'verbose output')
-  .option('-f, --format', 'format for archive directory [YYYY-MM-DD_hh-mm-ss]', 'YYYY-MM-DD_hh-mm-ss')
+  .option('-f, --format', 'format for archive directory [YYYY-MM-DD_hh-mm-ss]', defaults.format)
   .option('-p, --purge n[units]', 'remove backups older than... "2seconds", "2minutes", "2hours", "2days", "2weeks"')
   .parse(process.argv)
 
 var src = program.args[0]
-bp(src, program).then(null, console.error)
+var dest = process.cwd()
+bp(src, dest, program).then(null, console.error)

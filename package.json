@@ -16,7 +16,9 @@
     "chai": "^3.2.0",
     "fs-exists": "^0.1.1",
     "mocha": "^2.2.5",
+    "rewire": "^2.3.4",
     "rimraf": "^2.4.2",
+    "sinon": "^1.15.4",
     "standard": "^4.5.4"
   },
   "scripts": {
