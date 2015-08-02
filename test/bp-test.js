@@ -15,7 +15,7 @@ var exec = require('../lib/exec')
 var shouldExist = require('./lib/should-exist')
 var backpocket = rewire('../lib/backpocket')
 
-describe('rsync', function () {
+describe('backpocket', function () {
   var src, dest, revertables
 
   beforeEach(function () {
