@@ -9,8 +9,9 @@ var log = console.log.bind(console)
 program
   .version(version)
   .description('create incremental backups of target in the current working directory')
-  .usage('[options] <target> \n\n  e.g. "backpocket ../files" or "backpocket user@server:files"')
+  .usage('[options] <target> \n\n  e.g. "backpocket ../files" or "backpocket -p 30days -f YYYY-MM-DD_hh-mm-ss user@server:files"')
   .option('-v, --verbose', 'verbose output')
+  .option('-f, --format', 'format for archive directory [YYYY-MM-DD_hh-mm-ss]', 'YYYY-MM-DD_hh-mm-ss')
   .parse(process.argv)
 
 var src = program.args[0]
