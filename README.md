@@ -50,7 +50,7 @@ backpocket --help
 
 ### features
 - works over ssh
-- only transfers modified files
+- only transfers missing or modified files
 - uses hard links i.e. if nothing changed, incremental backup takes up zero additional disk space
 - unit tested
 
