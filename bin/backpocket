@@ -16,4 +16,5 @@ program
 
 var src = program.args[0]
 var dest = process.cwd()
-bp(src, dest, program).then(null, console.error)
+
+if (src && dest) bp(src, dest, program).then(null, console.error)
