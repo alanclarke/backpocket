@@ -14,7 +14,7 @@ backpocket user@server:/my/important/files
 /*
  *  Creates the following in ~/backups
  *  - latest
- *  - yyyy-mm-dd_hh-mm-ss
+ *  - YYYY-MM-DD_HH-mm-ss
 */
 
 // subsequent calls
@@ -24,9 +24,9 @@ backpocket bob@server:/my/important/files
 /*
  *  Creates more incremental archives
  *  - latest
- *  - yyyy-mm-dd_hh-mm-ss
- *  - yyyy-mm-dd_hh-mm-ss
- *  - yyyy-mm-dd_hh-mm-ss
+ *  - YYYY-MM-DD_HH-mm-ss
+ *  - YYYY-MM-DD_HH-mm-ss
+ *  - YYYY-MM-DD_HH-mm-ss
 */
 
 backpocket --help
@@ -43,7 +43,7 @@ backpocket --help
  *    -h, --help            output usage information
  *    -V, --version         output the version number
  *    -v, --verbose         verbose output
- *    -f, --format          format for archive directory (default is "YYYY-MM-DD_hh-mm-ss")
+ *    -f, --format          format for archive directory (default is "YYYY-MM-DD_HH-mm-ss")
  *    -p, --purge n[units]  remove backups older than... "2seconds", "2minutes", "2hours", "2days", "2weeks"
  */
 ```

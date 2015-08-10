@@ -10,7 +10,7 @@ program
   .description('create incremental backups of target in the current working directory')
   .usage('[options] <target> \n\n  e.g. "backpocket ../files" or "backpocket -p 30days -f ' + defaults.format + ' user@server:files"')
   .option('-v, --verbose', 'verbose output')
-  .option('-f, --format', 'format for archive directory [YYYY-MM-DD_hh-mm-ss]', defaults.format)
+  .option('-f, --format', 'format for archive directory [YYYY-MM-DD_HH-mm-ss]', defaults.format)
   .option('-p, --purge n[units]', 'remove backups older than... "2seconds", "2minutes", "2hours", "2days", "2weeks"')
   .parse(process.argv)
 
