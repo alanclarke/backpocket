@@ -40,8 +40,8 @@ describe('pax', function () {
           exec(['du', '-sh', path.dirname(dest)])
         )
         .then(function (sizes) {
-          var destSize = sizes[0][0]
-          var parentSize = sizes[1][0]
+          var destSize = sizes[0]
+          var parentSize = sizes[1]
           expect(destSize).to.contain('4.0K')
           expect(parentSize).to.contain('4.0K')
         })

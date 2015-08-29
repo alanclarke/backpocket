@@ -83,5 +83,5 @@ describe('rsync', function () {
 })
 
 function parseOutput (output) {
-  return output.split('\n').slice(1, -4)
+  return output.split('\n')
 }
