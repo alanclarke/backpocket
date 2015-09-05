@@ -1,6 +1,5 @@
 var expect = require('chai').expect
-var nodefn = require('when/node')
-var exists = nodefn.lift(require('fs-exists'))
+var exists = require('../../lib/exists')
 
 module.exports = function shouldExist (dir, expectation) {
   return function () {
