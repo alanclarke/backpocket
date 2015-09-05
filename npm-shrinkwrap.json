@@ -14,6 +14,11 @@
         }
       }
     },
+    "fs-exists": {
+      "version": "0.1.1",
+      "from": "fs-exists@*",
+      "resolved": "https://registry.npmjs.org/fs-exists/-/fs-exists-0.1.1.tgz"
+    },
     "mkdirp": {
       "version": "0.5.1",
       "from": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
