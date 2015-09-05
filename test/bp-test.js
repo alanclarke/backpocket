@@ -94,5 +94,4 @@ describe('backpocket', function () {
       )).to.eql(true)
     })
   })
-
 })
