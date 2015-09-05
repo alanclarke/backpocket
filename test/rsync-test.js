@@ -20,7 +20,7 @@ describe('rsync', function () {
   })
 
   afterEach(function () {
-    return rimraf(path.dirname(src))
+    return rimraf(path.join(__dirname, 'backups'))
   })
 
   it('should transfer missing files', function () {
@@ -78,10 +78,10 @@ describe('rsync', function () {
     paths = {}
     var folders = ['src', 'dest']
     folders.forEach(function (name) {
-      paths[name] = { dir: path.join(__dirname, 'backups',  name )}
-      paths[name].transferMe = path.join(paths[name].dir,  'transferMe' )}
-      paths[name].deleteMe = path.join(paths[name].dir,  'deleteMe' )}
-      paths[name].allreadyThere = path.join(paths[name].dir,  'allreadyThere' )}
+      paths[name] = { dir: path.join(__dirname, 'backups', name) }
+      paths[name].transferMe = path.join(paths[name].dir, 'transferMe')
+      paths[name].deleteMe = path.join(paths[name].dir, 'deleteMe')
+      paths[name].allreadyThere = path.join(paths[name].dir, 'allreadyThere')
     })
   }
 
