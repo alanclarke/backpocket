@@ -74,6 +74,28 @@ describe('rsync', function () {
       })
   })
 
+  describe('ignore', function () {
+    it('should ignore files specified by ignore', function () {
+      return rsync(paths.src.dir, paths.dest.dir, {
+        ignore: [ paths.src.transferMe ]
+      })
+      .then(shouldExist(paths.dest.transferMe, false))
+    })
+  })
+
+  describe('.ignore', function () {
+    beforeEach(function () {
+      return writeFile(
+        path.join(paths.dest.dir, '.ignore'),
+        paths.src.transferMe.replace(paths.src.dir, '')
+      )
+    })
+    it('should ignore files specified by .ignore', function () {
+      return rsync(paths.src.dir, paths.dest.dir)
+        .then(shouldExist(paths.dest.transferMe, false))
+    })
+  })
+
   function setPaths () {
     paths = {}
     var folders = ['src', 'dest']
@@ -82,6 +104,7 @@ describe('rsync', function () {
       paths[name].transferMe = path.join(paths[name].dir, 'transferMe')
       paths[name].deleteMe = path.join(paths[name].dir, 'deleteMe')
       paths[name].allreadyThere = path.join(paths[name].dir, 'allreadyThere')
+      paths[name]['.ignore'] = path.join(paths[name].dir, 'allreadyThere')
     })
   }
 
