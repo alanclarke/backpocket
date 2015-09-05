@@ -84,14 +84,18 @@ describe('rsync', function () {
   })
 
   describe('.ignore', function () {
+    var ignoreFile
     beforeEach(function () {
+      ignoreFile = path.join(paths.dest.dir, '.ignore')
       return writeFile(
-        path.join(paths.dest.dir, '.ignore'),
+        ignoreFile,
         paths.src.transferMe.replace(paths.src.dir, '')
       )
     })
     it('should ignore files specified by .ignore', function () {
-      return rsync(paths.src.dir, paths.dest.dir)
+      return rsync(paths.src.dir, paths.dest.dir, {
+          ignoreFile: ignoreFile
+        })
         .then(shouldExist(paths.dest.transferMe, false))
     })
   })

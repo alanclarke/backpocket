@@ -94,4 +94,18 @@ describe('backpocket', function () {
       )).to.eql(true)
     })
   })
+
+  describe('with ignore', function () {
+    beforeEach(function () {
+      return writeFile(path.join(dest, '.ignore'), 'hello')
+    })
+    it('should pass ignoreFile to rsync', function () {
+      return backpocket(src, dest).then(function () {
+        expect(backpocket.__get__('rsync')
+          .calledWith(src, path.join(dest, 'latest'), {
+            ignoreFile: path.join(dest, '.ignore')
+          })).to.eql(true)
+      })
+    })
+  })
 })
