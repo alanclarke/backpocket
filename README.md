@@ -14,7 +14,7 @@ backpocket user@server:/my/important/files
 /*
  *  Creates the following in ~/backups
  *  - latest
- *  - YYYY-MM-DD_HH-mm-ss
+ *  - 2016-02-16_14-46-54
 */
 
 // subsequent calls
@@ -24,9 +24,9 @@ backpocket bob@server:/my/important/files
 /*
  *  Creates more incremental archives
  *  - latest
- *  - YYYY-MM-DD_HH-mm-ss
- *  - YYYY-MM-DD_HH-mm-ss
- *  - YYYY-MM-DD_HH-mm-ss
+ *  - 2016-02-16_14-46-54
+ *  - 2016-02-16_14-47-03
+ *  - 2016-02-16_14-47-41
 */
 
 backpocket --help
