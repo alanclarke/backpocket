@@ -1,6 +1,6 @@
 {
   "name": "backpocket",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Lost your files? Check your backpocket. A simpler backup/snapshotting tool using rsync and pax",
   "main": "lib/backpocket",
   "bin": {
