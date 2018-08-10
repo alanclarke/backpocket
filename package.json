@@ -21,7 +21,7 @@
     "standard": "^4.5.4"
   },
   "scripts": {
-    "test": "node_modules/.bin/standard && node_modules/.bin/mocha test/*-test.js"
+    "test": "standard && node_modules/.bin/mocha test/*-test.js"
   },
   "repository": {
     "type": "git",
@@ -34,10 +34,14 @@
     "pax",
     "timemachine"
   ],
-  "author": "alanclarke",
+  "author": "Alan Clarke <code@alz.io> (alz.io)",
   "license": "Unlicense",
   "bugs": {
     "url": "https://github.com/alanclarke/backpocket/issues"
   },
-  "homepage": "https://github.com/alanclarke/backpocket#readme"
+  "homepage": "https://github.com/alanclarke/backpocket#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
 }
